@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Narmada Pustak Bhandar : Problem Resolver</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body { background-color: #b0a6a0; margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input,#user { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: auto; height: 2rem;}
+      /*#input:focus { outline: none; }*/
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+      #messages { list-style-type: none;width: 80%;margin: auto;padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; }
+      #messages > li:nth-child(odd) { background: #efefef; }
+      .container {
+  border: 2px solid #dedede;
+  background-color: #383634;
+  border-radius: 5px;
+  color: #383634;
+  height : auto;
+  padding: 10px;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+
+.darker {
+  border-color: #ddd;
+  background-color: #1f2833;
+}
+
+.container::after {
+  content: "";
+  height : auto;
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+.space{
+  width: 2rem;
+}
+ul{
+  width: 100%;
+  position: sticky;
+  top : 0;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li{
+  list-style-type: none;
+  float: left;
+  background-color: black;
+}
+li a{
+  color: white;
+  text-align: center;
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: larger;
+}
+.active{
+  background-color: #2d3e75;
+  border-radius: 10px;
+}
+@media screen and (max-width: 600px){
+  li{
+    float: none;
+  }
+}
+.formContainer{
+  margin: auto;
+  width: 90%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.container {
+border: 2px solid #dedede;
+background-color: #f1f1f1;
+border-radius: 5px;
+height : auto;
+padding: 10px;
+margin: 10px 0;
+overflow-x: auto;
+}
+
+.darker {
+border-color: #ccc;
+background-color: #ddd;
+}
+
+.container::after {
+content: "";
+height : auto;
+clear: both;
+display: table;
+}
+    </style>
+  </head>
+  <body>
+    <ul>
+      <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/#footer">Contact</a></li>
+      <li><a href="/about">About</a></li>
+      <li> <a href="/map">Map</a> </li>
+      <li><a class='active' href="/problemResolver">Problem Resolver</a></li>
+      </ul>
+    </ul>
+    <div id="messages">
+
+      <%data.forEach((data)=>{%>
+        <div class="container darker">
+         <h4><%=data.user%></h4>
+         <p><%=data.msg%></p>
+         <!--<span class="time-right">11:02</span>-->
+        </div>
+      <%})%>
+    </div>
+    <form id="form" action="">
+      <input id="user" autocomplete="on" placeholder="Name" />
+      <div class="space">
+
+      </div>
+      <input id="input" autocomplete="off" placeholder="Query or comment" /><button>Send</button>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+var socket = io();
+
+var messages = document.getElementById('messages')
+var form = document.getElementById('form');
+var input = document.getElementById('input');
+var username = document.getElementById('user')
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  if (input.value) {
+    socket.emit('chat message', username.value,input.value);
+    input.value = '';
+  }
+});
+
+socket.on('chat message', function(user,msg) {
+  var item = document.createElement('p');
+  var usr = document.createElement('h4');
+  var div = document.createElement('div');
+  item.textContent = msg;
+  usr.textContent = user;
+  div.classList.add('container')
+  div.classList.add('darker')
+  div.appendChild(usr)
+  div.appendChild(item)
+  messages.appendChild(div)
+  //messages.appendChild(item)
+  window.scrollTo(0, document.body.scrollHeight);
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narmada Pustak Bhandar : Map</title>
+    <style>
+      ul{
+        width: 100%;
+        position: sticky;
+        top : 0;
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      li{
+        list-style-type: none;
+        float: left;
+        background-color: black;
+      }
+      li a{
+        color: white;
+        text-align: center;
+        display: block;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: larger;
+      }
+      .active{
+        background-color: #b642f5;
+        border-radius: 10px;
+      }
+      @media screen and (max-width: 600px){
+        li{
+          float: none;
+        }
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 100%; /* 1:1 Aspect Ratio */
+      }
+
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;
+        border: none;
+      }
+      @media screen and (max-width : 850px) {
+        .responsive-iframe {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      @media screen and (min-width : 1075px) {
+        .responsive-iframe {
+          width: 70%;
+          height: 70%;
+        }
+      }
+      @media screen and (min-width : 1230px) {
+        .responsive-iframe {
+          width: 60%;
+          height: 60%;
+        }
+      }
+      @media screen and (min-width : 1350px) {
+        .responsive-iframe {
+          width: 55%;
+          height: 55%;
+        }
+      }
+</style>
+
+<body>
+  <ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/#footer">Contact</a></li>
+  <li><a href="/about">About</a></li>
+  <li> <a class="active" href="/map">Map</a> </li>
+  <li><a href="/problemResolver">Problem Resolver</a></li>
+  </ul>
+<h1>Click on magnifying button to see proper location</h1>
+<h2>To view our shop directly on google map click on this link, <a href="https://www.google.com/maps/place/Narmada+Pustak+Bhandaar/@22.944736,81.077063,21z/data=!4m5!3m4!1s0x0:0x885a75d99bedc2!8m2!3d22.944709!4d81.0770745?hl=en-GB" target="_blank">Narmada Pustak Bhandar</a></h2>
+<div class="container">
+  <iframe class="responsive-iframe" src="https://maps.google.com/maps?q=22.944736,81.077063&t=&z=19&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+</body>
+
+
+</html>

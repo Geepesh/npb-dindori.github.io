@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narmada Pustak Bhandar : Home Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style media="screen">
+    body{
+
+    }
+    ul{
+      width: 100%;
+      position: sticky;
+      top : 0;
+      border-radius: 10px;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    li{
+      list-style-type: none;
+      float: left;
+      background-color: black;
+    }
+    li a{
+      color: white;
+      text-align: center;
+      display: block;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: larger;
+    }
+    .active{
+      background-color: #b642f5;
+      border-radius: 10px;
+    }
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width : 100%;
+  border-radius: 20px;
+}
+.card > img {
+  border-radius: 20px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.grid-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px
+}
+.banner{
+  padding: 10px;
+  font-size: 3vw;
+  font-weight: bold;
+  margin-top: 20px;
+  width : fit-content;
+}
+.cntr {
+  padding: 2px 16px;
+}
+
+
+    @media screen and (max-width: 600px){
+      li{
+        float: none;
+      }
+      .card{
+        font-size: medium
+      }
+      .banner{
+        font-size: 5vw;
+      }
+      .grid-container{
+         grid-template-columns: auto auto;
+      }
+    }
+
+    @media screen and (min-width : 750px){
+      .banner{
+        font-size : 3.5vw
+      }
+    }
+    @media screen and (min-width : 600px;max-width: 750px){
+      .banner{
+        font-size : 4vw
+      }
+    }
+    @media screen and (min-width : 800px){
+      .grid-container{
+         grid-template-columns: auto auto auto auto;
+      }
+    }
+    #img{
+      width : 90%;
+      margin : 5%;
+    }
+    </style>
+  </head>
+  <body>
+  <ul>
+  <li><a class="active" id="home" href="/">Home</a></li>
+  <li><a href="/#footer">Contact</a></li>
+  <li><a href="/about">About</a></li>
+  <li> <a href="/map">Map</a> </li>
+  <li><a href="/problemResolver">Problem Resolver</a></li>
+  </ul>
+  <div class="banner">
+    Welcome to Narmada Pustak Bhandar's page <hr> Explore our products and also other available Products
+  </div>
+  <img src="" id="img" alt="">
+  <h1>Narmada Project :</h1>
+  <div class="grid-container">
+  <div class="card">
+  <img src="/photos/9e.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : English </p> <p> Class : 9th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img style="width:100%" src="/photos/9sst.jpg" alt="">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Social Science(hindi medium) </p> <p> Class : 9th</p>
+  </div>
+  </div>
+  <div class="card">
+    <img style="width:100%" src="/photos/9h.jpg" alt="">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Hindi </p> <p> Class : 9th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/9s.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Sanskrit </p> <p> Class : 9th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/9m.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Maths(hindi medium) </p> <p> Class : 9th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/10e.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : English </p> <p> Class : 10th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/10m.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Maths (hindi medium) </p> <p> Class : 10th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/10s.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Sanskrit </p> <p> Class : 10th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/10sst.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : Social Science(hindi medium) </p> <p> Class : 10th</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/10h.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : Narmada Project </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Subject : hindi </p> <p> Class : 10th</p>
+  </div>
+  </div>
+</div>
+<h1>A4 Notebooks :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/a41.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/a42.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/a43.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/a44.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/a45.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/a46.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/b`.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>A4 Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+</div>
+<h1>Dual Cover Royal Notebook :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/dbl1.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Dual Cover Royal Notebook(PVC and Hard Paper-Back) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/dbl2.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Dual Cover Royal Notebook(PVC and Hard Paper-Back) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/dbl3.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Dual Cover Royal Notebook(PVC and Hard Paper-Back) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/dbl4.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Dual Cover Royal Notebook(PVC and Hard Paper-Back) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>
+  </div>
+  </div>
+</div>
+<h1>Royal Notebooks :</h1>
+<div class="grid-container">
+<div class="card">
+<img src="/photos/royal1.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal2.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal3.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal4.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal5.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal6.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/royal7.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+<p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+</div>
+</div>
+<div class="card">
+<img src="/photos/b.jpg" alt="Avatar" style="width:100%">
+<div class="cntr">
+  <p>Royal Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+</div>
+</div>
+</div>
+<h1>CNB Notebooks :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/cnb1.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb2.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb3.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+      <p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb4.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb5.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb6.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb7.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb8.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb9.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb10.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CNB Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb11.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : CNB Notebook</p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : B-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cnb12.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Product : CNB Notebook</p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p> Page Quality : B-Grade </p>
+  </div>
+  </div>
+</div>
+<h1>CC Notebooks :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/cc1.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CC Notebook(Collage Assignment Notebook) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/cc2.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>CC Notebook(Collage Assignment Notebook) </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+  </div>
+  </div>
+</div>
+<h1>Small Notebooks :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/small1.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Small Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : B-Grade</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/small2.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+      <p>Small Notebook </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade</p>
+  </div>
+  </div>
+</div>
+<h1>Project Pages :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/plainPage.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Project Page </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Qunatity : 28(including both sides)</p> <p>Page Type : Plain</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/oneSided.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>Project Page </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Qunatity : 28(including both sides)</p> <p>Page Type : One-Sided(1 Phase is rulled and anthor phase is plain)</p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/mixed.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>Project Page </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Qunatity : 28(including both sides)</p> <p>Page Type : Mixed</p>
+</div>
+  </div>
+  <div class="card">
+  <img src="/photos/rulled.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+<p>Project Page </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Qunatity : 28(including both sides)</p> <p>Page Type : Rulled</p>
+  </div>
+  </div>
+</div>
+<h1>Registers :</h1>
+<div class="grid-container">
+  <div class="card">
+  <img src="/photos/Register.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Register </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>
+  </div>
+  </div>
+  <div class="card">
+  <img src="/photos/register'.jpg" alt="Avatar" style="width:100%">
+  <div class="cntr">
+    <p>Register </p> <p>Manufacturer : Narmada Pustak Bhandar</p>  <p>Page Quality : A-Grade </p>  </div>
+  </div>
+    </div>
+
+    <script type="text/javascript">
+
+
+      let img = document.getElementById('img');
+      let time = 2500;
+      let arr = []
+      let i = 0
+      arr[0] = '/photos/b1.jpeg'
+      arr[1] = '/photos/b2.jpeg'
+      arr[2] = '/photos/b3.jpeg'
+      let changeImg = ()=>{
+        img.src = arr[i]
+        if(i<arr.length-1){
+          i++
+        }else{
+          i = 0
+        }
+
+        setTimeout('changeImg()',time)
+      }
+
+      window.onload = changeImg;
+    </script>
+  </body>
+  <footer id="footer" style="
+  background-color : black;
+  bottom : 0;
+  left : 0;
+  width : 100%;
+  color : white;
+  padding: : 10px;
+  ">
+
+  <h1 style="padding:15px;"><a style="color:white;" href="https://www.instagram.com/narmada_pustak_bhandar/"><i style="margin-right : 25px;" class="fa-brands fa-instagram"></i></a> <a style="color:white;" href="https://www.facebook.com/people/Narmada-Pustak-Bhandar/100076448975463/"><i style="margin-right : 25px;" class="fa-brands fa-facebook"></i></a> <a style="color:white;"  href="https://twitter.com/NarmadaChanchal"><i style="margin-right : 25px;" class="fa-brands fa-twitter"></i></a> <a style="color:white;"  href="https://www.google.com/maps/place/Narmada+Pustak+Bhandaar/@22.944736,81.077063,21z/data=!4m12!1m6!3m5!1s0x0:0x885a75d99bedc2!2sNarmada+Pustak+Bhandaar!8m2!3d22.944709!4d81.0770745!3m4!1s0x0:0x885a75d99bedc2!8m2!3d22.944709!4d81.0770745?hl=en-GB"><i class="fa-solid fa-location-dot"></i></a></h1>
+  <h3>Please Explore our pages and like posts</h3>
+  <h3 style="padding:15px;">To meet offline visit our offices</h3>
+  <div class="l">
+    <h3 style="padding:15px;" id="l">Narmada pustak Bhandar <br> Indra Market, Dindori <br> 481880 <br> Madhya Pradesh, India </h3>
+  </div>
+<div class="r">
+  <h3 style="padding:15px;" id="r">Maa Narmada Enterprices <br>Shop no.s 13,14,15 & 16 <br> Ghandhi Chowk, Dindori <br> 481880 <br>Madhya Pradesh, India </h3>
+</div>
+</footer>
+
+</html>
