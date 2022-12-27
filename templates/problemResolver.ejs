@@ -118,63 +118,6 @@ display: table;
     </style>
   </head>
   <body>
-    <ul>
-      <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/#footer">Contact</a></li>
-      <li><a href="/about">About</a></li>
-      <li> <a href="/map">Map</a> </li>
-      <li><a class='active' href="/problemResolver">Problem Resolver</a></li>
-      </ul>
-    </ul>
-    <div id="messages">
-
-      <%data.forEach((data)=>{%>
-        <div class="container darker">
-         <h4><%=data.user%></h4>
-         <p><%=data.msg%></p>
-         <!--<span class="time-right">11:02</span>-->
-        </div>
-      <%})%>
-    </div>
-    <form id="form" action="">
-      <input id="user" autocomplete="on" placeholder="Name" />
-      <div class="space">
-
-      </div>
-      <input id="input" autocomplete="off" placeholder="Query or comment" /><button>Send</button>
-    </form>
-    <script src="/socket.io/socket.io.js"></script>
-<script>
-var socket = io();
-
-var messages = document.getElementById('messages')
-var form = document.getElementById('form');
-var input = document.getElementById('input');
-var username = document.getElementById('user')
-
-form.addEventListener('submit', function(event) {
-  event.preventDefault();
-  if (input.value) {
-    socket.emit('chat message', username.value,input.value);
-    input.value = '';
-  }
-});
-
-socket.on('chat message', function(user,msg) {
-  var item = document.createElement('p');
-  var usr = document.createElement('h4');
-  var div = document.createElement('div');
-  item.textContent = msg;
-  usr.textContent = user;
-  div.classList.add('container')
-  div.classList.add('darker')
-  div.appendChild(usr)
-  div.appendChild(item)
-  messages.appendChild(div)
-  //messages.appendChild(item)
-  window.scrollTo(0, document.body.scrollHeight);
-});
-</script>
+    <h1><%=status%></h1>
   </body>
 </html>
