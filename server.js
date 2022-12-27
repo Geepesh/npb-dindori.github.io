@@ -3,7 +3,7 @@
 const express = require('express')
 const app = express()
 const http = require('http').createServer(app);
-const io = require('socket.io')(http);
+//const io = require('socket.io')(http);
 //const multer = require('multer')
 const mongoose = require('mongoose')
 const port = 8010 || process.env.PORT
@@ -11,21 +11,23 @@ const bp = require('body-parser')
 //const Data = require('./models/schema_')
 const Msg = require('./models/messages')
 //const sharp = require('sharp')
-const uri = "mongodb+srv://geepesh_agrawal:geepeshagrawal@cluster0.n8viw.mongodb.net/message-database?retryWrites=true&w=majority"
+//const uri = "mongodb+srv://user:pass@cluster0.n8viw.mongodb.net/message-database?retryWrites=true&w=majority"
 
-app.use(bp.urlencoded({
+/*app.use(bp.urlencoded({
   extended : false
 }))
+*/
 app.set('view engine','ejs')
 app.set('views','templates')
 app.use(express.static('staticFiles'))
 //app.use('/uploads',express.static('uploads'))
+/*
 mongoose.connect(uri,{
   useNewUrlParser : true
 }).then(()=>{
     console.log('DATABASE CONNECTED!!!!!!!!');
 })
-
+*/
 app.get('/',(req,res)=>{
   res.render('main')
 })
@@ -40,19 +42,11 @@ app.get('/map',(req,res)=>{
   res.render('map')
 })
 app.get('/problemResolver',(req,res)=>{
-  Msg.find({},(err,data)=>{
   res.render('problemResolver',{
-    data : data
-    })
-  })
-  .exec((err, data)=>{
-      if(err){console.log(err)}
-      else{
-        res.json(data)
-      }
-  })
+    status : "Sorry our server is not working that is why we removed chat options for some time"
 })
-app.post('/problemResolver', (req, res) => {
+})
+/*app.post('/problemResolver', (req, res) => {
   Msg.find({},(err,data)=>{
   res.render('problemResolver',{
     data : data
@@ -78,9 +72,9 @@ io.on('connection', (socket) => {
     })
   })
 });
-
+*/
 app.get('*',(req,res)=>{
-  res.send('404')
+  res.send('<h1>404<h1><a href="/">Go to Our Homepage</a>')
 })
 
 
